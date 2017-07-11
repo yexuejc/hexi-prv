@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">hexi-prv</string>
+    <string name="error_code_500">网络开小差了</string>
+</resources>
