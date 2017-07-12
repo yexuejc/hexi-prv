@@ -3,6 +3,7 @@ package com.yexue.android.hexiprv.model;
 import com.yexue.android.hexiprv.bean.ResultData;
 import com.yexue.android.hexiprv.propreties.HttpsValues;
 
+import retrofit2.Retrofit;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -31,4 +32,5 @@ public interface PptIco {
      */
     @GET(HttpsValues.GET_PING_GO_PPT)
     Observable<ResultData> list(@Query("pptKey") String pptKey);
+
 }

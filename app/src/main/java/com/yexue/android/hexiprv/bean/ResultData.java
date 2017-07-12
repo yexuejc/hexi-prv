@@ -9,16 +9,16 @@ import java.util.Objects;
  * @explain 网络请求封装
  * @time 2017/7/11 14:23
  */
-public class ResultData {
-    private Objects datas;
+public class ResultData<T> {
+    private T datas;
     private String message;
     private boolean flag;
 
-    public Objects getDatas() {
+    public T getDatas() {
         return datas;
     }
 
-    public void setDatas(Objects datas) {
+    public void setDatas(T datas) {
         this.datas = datas;
     }
 

@@ -5,10 +5,15 @@ import android.util.Log;
 
 import com.yexue.android.hexiprv.R;
 import com.yexue.android.hexiprv.bean.ResultData;
+import com.yexue.android.hexiprv.bean.ResultPptIco;
+import com.yexue.android.hexiprv.bean.ResultPptIcoGsonFormat;
+import com.yexue.android.hexiprv.bean.ResultPptIcoMap;
 import com.yexue.android.hexiprv.model.impl.PptIcoImpl;
 import com.yexue.android.hexiprv.sys.BaseObserver;
 import com.yexue.android.hexiprv.ui.base.BasePresenter;
 import com.yexue.android.hexiprv.utils.T;
+
+import java.io.File;
 
 import rx.Observable;
 import rx.Observer;
@@ -46,9 +51,9 @@ public class MainPresenter extends BasePresenter<IMainView> {
     }
 
     private BaseObserver getInitObservable() {
-        return new BaseObserver<ResultData>(new BaseObserver.HttpCallBack<ResultData>() {
+        return new BaseObserver<ResultData<ResultPptIcoGsonFormat>>(new BaseObserver.HttpCallBack<ResultData<ResultPptIcoGsonFormat>>() {
             @Override
-            public void onComplete(int code, ResultData resultData) {
+            public void onComplete(int code, ResultData<ResultPptIcoGsonFormat> resultData) {
                 switch (code) {
                     case 0:
                         break;
@@ -61,5 +66,11 @@ public class MainPresenter extends BasePresenter<IMainView> {
                 }
             }
         });
+    }
+
+
+    public void uploadImg(File file,String method){
+
+
     }
 }
