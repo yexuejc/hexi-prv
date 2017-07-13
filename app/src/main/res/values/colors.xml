@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="gray">#dddddd</color>
+    <!--脸红的淡紫色-->
+    <color name="lavender_blush">#FFF0F5</color>
+    <!--蓟-->
+    <color name="thistle">#D8BFD8</color>
 </resources>

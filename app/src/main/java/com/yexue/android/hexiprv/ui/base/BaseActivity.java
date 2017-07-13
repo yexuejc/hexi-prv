@@ -6,6 +6,7 @@ import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 
 import com.yexue.android.hexiprv.sys.AppUtils;
+import com.yexue.android.hexiprv.ui.dialog.DialogLoading;
 
 import butterknife.ButterKnife;
 import rx.Subscription;
@@ -63,4 +64,29 @@ public abstract class BaseActivity extends Activity {
      * </pre>
      */
     protected abstract void onInitLayoutAfter();
+
+    /***********************************加载框********************************************/
+
+    /**
+     * 显示加载框
+     */
+    protected void showLoadingDialog() {
+        if (loading == null) {
+            loading = new DialogLoading(this);
+        }
+        loading.show();
+    }
+
+    /**
+     * 关闭加载框
+     */
+    protected void hideLoadingDialog() {
+        if (loading != null) {
+            loading.dismiss();
+        }
+
+    }
+
+    private DialogLoading loading;
+    /***********************************加载框********************************************/
 }

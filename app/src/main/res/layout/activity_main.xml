@@ -4,16 +4,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="https://shop.globalhexi.cn/shop/pptIco/list?pptKey=SY_BOT_TB" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/pptIco_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:background="@color/gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://shop.globalhexi.cn/shop/pptIco/list?pptKey=SY_BOT_TB" />
+
+            <TextView
+                android:id="@+id/pptIco_list_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:text="Hello World!" />
+
+            <TextView
+                android:id="@+id/pptIco_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lavender_blush"
+                android:text="Hello World!" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
